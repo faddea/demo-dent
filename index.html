@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Odontológica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#00A6B4',
+                        secondary: '#1E3A5F',
+                        accent: '#F4A261'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Nav -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-secondary" id="logo">Clínica Dental</a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#servicios" class="text-gray-700 hover:text-primary transition">Servicios</a>
+                    <a href="#sobre-nosotros" class="text-gray-700 hover:text-primary transition">Nosotros</a>
+                    <a href="#testimonios" class="text-gray-700 hover:text-primary transition">Testimonios</a>
+                    <a href="#contacto" class="bg-primary text-white px-5 py-2 rounded-lg hover:bg-opacity-90 transition">
+                        Agendar Turno
+                    </a>
+                </div>
+                <button id="menu-toggle" class="md:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+    </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 z-50 hidden">
+            <div class="absolute inset-0 bg-black bg-opacity-50" id="mobile-overlay"></div>
+            <div class="absolute right-0 top-0 h-full w-64 bg-white shadow-xl transform translate-x-full transition-transform duration-300 flex flex-col" id="mobile-panel">
+                <div class="p-6 flex-1">
+                    <button id="mobile-close" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                    <div class="mt-12 space-y-4">
+                        <a href="#servicios" class="block text-gray-700 hover:text-primary py-2">Servicios</a>
+                        <a href="#sobre-nosotros" class="block text-gray-700 hover:text-primary py-2">Nosotros</a>
+                        <a href="#testimonios" class="block text-gray-700 hover:text-primary py-2">Testimonios</a>
+                        <a href="#contacto" class="block bg-primary text-white px-5 py-2 rounded-lg text-center mt-4">Agendar Turno</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    <!-- Hero -->
+    <section id="hero" class="relative min-h-screen flex items-center bg-gradient-to-br from-gray-50 to-gray-100">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute -top-40 -right-40 w-80 h-80 bg-primary opacity-10 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-accent opacity-10 rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="hero-content">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary mb-6 leading-tight">
+                        Tu <span class="text-primary">sonrisa</span> es nuestra prioridad
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8 max-w-lg">
+                        Cuidamos tu salud bucodental con tecnología de última generación y un equipo de profesionales comprometidos con tu bienestar.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contacto" class="bg-primary text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-opacity-90 transition text-center">
+                            Agendar Turno
+                        </a>
+                        <a href="#servicios" class="border-2 border-secondary text-secondary px-8 py-3 rounded-lg text-lg font-medium hover:bg-secondary hover:text-white transition text-center">
+                            Ver Servicios
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image hidden md:block">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+                        <img src="screenshots/Dentistas-profesional-de-la-salud-scaled.webp" alt="Clínica Dental" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Nuestros Servicios</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Ofrecemos una amplia gama de tratamientos dentales para cuidar de ti y tu familia.
+                </p>
+            </div>
+            <div id="servicios-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Generado dinámicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nosotros -->
+    <section id="sobre-nosotros" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="sobre-imagen">
+                    <div class="rounded-2xl overflow-hidden shadow-xl">
+                        <img src="/screenshots/dental_mobile.png" alt="Nuestra Clínica" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="sobre-contenido">
+                    <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-6">Cuidamos tu Sonrisa</h2>
+                    <p class="text-gray-600 mb-6">
+                        Somos una clínica odontológica comprometida con la excelencia en atención dental. Nuestro equipo de profesionales altamente capacitados utiliza tecnología de última generación para brindarte los mejores tratamientos.
+                    </p>
+                    <p class="text-gray-600 mb-8">
+                        Priorizamos tu comodidad y bienestar en cada visita, creando un ambiente cálido y profesional donde tu salud bucodental es nuestra mayor preocupación.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center p-4 bg-white rounded-xl shadow-sm">
+                            <div class="text-3xl font-bold text-primary">10+</div>
+                            <div class="text-gray-600">Años de experiencia</div>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-xl shadow-sm">
+                            <div class="text-3xl font-bold text-primary">5000+</div>
+                            <div class="text-gray-600">Pacientes satisfechos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonios" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Lo que dicen nuestros pacientes</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    La satisfacción de nuestros pacientes es nuestro mayor logro.
+                </p>
+            </div>
+            <div id="testimonios-grid" class="grid md:grid-cols-3 gap-8">
+                <!-- Generado dinámicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto / CTA -->
+    <section id="contacto" class="py-20 bg-gradient-to-br from-secondary to-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">¿Listo para transformar tu sonrisa?</h2>
+                <p class="text-white text-opacity-90 max-w-2xl mx-auto">
+                    Agenda tu consulta hoy mismo y descubre cómo podemos ayudarte a lograr la sonrisa que siempre quisiste.
+                </p>
+            </div>
+            <form id="contact-form" class="max-w-lg mx-auto bg-white rounded-2xl p-8 shadow-xl">
+                <div class="space-y-6">
+                    <div>
+                        <label class="block text-gray-700 mb-2">Nombre</label>
+                        <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 outline-none transition" placeholder="Tu nombre">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Teléfono</label>
+                        <input type="tel" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 outline-none transition" placeholder="Tu teléfono">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Email</label>
+                        <input type="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 outline-none transition" placeholder="tu@email.com">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Mensaje</label>
+                        <textarea class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 outline-none transition" rows="4" placeholder="¿En qué podemos ayudarte?"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg font-medium text-lg hover:bg-opacity-90 transition">
+                        Enviar Solicitud
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-secondary text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4" id="footer-logo">Clínica Dental</h3>
+                    <p class="text-white text-opacity-70">Cuidando tu sonrisa con profesionalismo y dedicación.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-white text-opacity-70" id="footer-contacto">
+                        <li>Teléfono: --</li>
+                        <li>Email: --</li>
+                        <li>Dirección: --</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Horario</h4>
+                    <ul class="space-y-2 text-white text-opacity-70" id="footer-horario">
+                        <!-- Generado dinámicamente -->
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Seguinos</h4>
+                    <div class="flex space-x-4" id="footer-redes">
+                        <a href="#" class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-opacity-20 transition">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-opacity-20 transition">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white border-opacity-20 mt-12 pt-8 text-center text-white text-opacity-50">
+                <p>&copy; 2026 Clínica Dental. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/5491123456789" target="_blank" id="whatsapp-btn" class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition transform hover:scale-110 z-40">
+        <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

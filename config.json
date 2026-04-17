@@ -1,0 +1,73 @@
+{
+  "clinica": {
+    "nombre": "Sonrisa Perfecta",
+    "telefono": "+54 11 1234-5678",
+    "email": "contacto@sonrisaperfecta.com",
+    "direccion": "Av. Principal 123, Ciudad",
+    "facebook": "https://facebook.com",
+    "instagram": "https://instagram.com"
+  },
+  "colores": {
+    "primary": "#00A6B4",
+    "secondary": "#1E3A5F",
+    "accent": "#F4A261"
+  },
+  "servicios": [
+    {
+      "titulo": "Ortodoncia",
+      "descripcion": "Corregí tus dientes con brackets tradicionales o invisibles",
+      "icono": "tooth"
+    },
+    {
+      "titulo": "Implantes",
+      "descripcion": "Recuperá tu sonrisa con implantes de titanio de alta calidad",
+      "icono": "implant"
+    },
+    {
+      "titulo": "Blanqueamiento",
+      "descripcion": "Obtén dientes más blancos y brillantes en una sesión",
+      "icono": "sparkle"
+    },
+    {
+      "titulo": "Endodoncia",
+      "descripcion": "Salvá tus dientes afectados con tratamiento de conducto",
+      "icono": "root"
+    },
+    {
+      "titulo": "Odontopediatría",
+      "descripcion": "Cuidado dental especializado para los más pequeños",
+      "icono": "child"
+    },
+    {
+      "titulo": "Prótesis",
+      "descripcion": "Dentaduras postizas y puentes personalizados",
+      "icono": "denture"
+    }
+  ],
+  "horario": {
+    "lunes": "9:00 - 18:00",
+    "martes": "9:00 - 18:00",
+    "miercoles": "9:00 - 18:00",
+    "jueves": "9:00 - 18:00",
+    "viernes": "9:00 - 16:00",
+    "sabado": "Cerrado",
+    "domingo": "Cerrado"
+  },
+  "testimonios": [
+    {
+      "nombre": "María González",
+      "texto": "Excelente atención, el equipo es muy profesional y amable. Mi tratamiento de ortodoncia fue un éxito.",
+      "estrellas": 5
+    },
+    {
+      "nombre": "Carlos Rodríguez",
+      "texto": "Me realiz un implante y el resultado fue impecable. Totalmente recomendable.",
+      "estrellas": 5
+    },
+    {
+      "nombre": "Ana López",
+      "texto": "Mi hija tiene miedo al dentista, pero aquí la hacen sentir cómoda. Ahora viene feliz.",
+      "estrellas": 5
+    }
+  ]
+}
